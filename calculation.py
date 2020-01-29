@@ -37,6 +37,12 @@ def differential(FormulaString, TargetSymbol, result, exception):
     except:
         exception()
 
+def integral(FormulaString, options, result, exception):
+    try:
+        result(sp.integrate(FormulaString, options))
+    except:
+        exception()
+
 def showAnswer(answer):
     result = tk.Toplevel()
     result.title(u"計算結果")
